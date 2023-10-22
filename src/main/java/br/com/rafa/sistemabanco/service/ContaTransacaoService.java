@@ -31,7 +31,7 @@ public class ContaTransacaoService {
     @PostMapping("/saque/{contaId}")
     public Transacao realizarSaque( Long idConta,  BigDecimal valor) {
         ContaCorrente contaCorrente = contaCorrenteService.buscarPorId(idConta);
-        return transacaoService.realizarDeposito(contaCorrente,valor);
+        return transacaoService.realizarSaque(contaCorrente,valor);
     }
 
 
